@@ -41,14 +41,14 @@ int main()
         cout << "Digite o ano do carro: " << endl;
         cin >> vetor_carros[i].ano;
 
-        cout << "Digite quantos revisões para este carro: " << endl;
+        cout << "Digite quantos revisoes para este carro: " << endl;
         cin >> contadorRevisao;
 
         vetor_carros[i].vetor_revisao = new revisao[contadorRevisao];
 
         for (int j = 0; j < contadorRevisao; j++)
         {
-            cout << "Digite a data da revisão:" << endl;
+            cout << "Digite a data da revisao:" << endl;
             cin >> vetor_carros[i].vetor_revisao[j].data;
             cout << "Digite o local da revisao: " << endl;
             cin >> vetor_carros[i].vetor_revisao[j].local;
@@ -62,7 +62,7 @@ int main()
         cout << "Ano: " << vetor_carros[i].ano << endl;
 
         for (int j = 0; j < contadorRevisao; j++){
-            cout << "\n ---------------- Revisao " << (contadorRevisao < 10)? "0"+contadorRevisao : contadorRevisao << " ---------------- " << endl;
+            cout << "\n ---------------- Revisao " << j << " ---------------- " << endl;
             cout << "Data: " << vetor_carros[i].vetor_revisao[j].data << endl;
             cout << "Local: " << vetor_carros[i].vetor_revisao[j].local << endl;
             cout << "----------------------------------xxx--------------------------------";
