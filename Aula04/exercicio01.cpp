@@ -67,6 +67,9 @@ int main()
             cout << "Local: " << vetor_carros[i].vetor_revisao[j].local << endl;
             cout << "----------------------------------xxx--------------------------------";
         }
+        delete[] vetor_carros[i].vetor_revisao;
     }
+
+    delete[] vetor_carros;
     return 0;
 }
