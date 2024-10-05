@@ -44,7 +44,7 @@ int main() {
     enqueue(&fila, 5);
     displayQueue(&fila);
 
-    /*
+    
     int elementoProcurado = 10;
     if (buscaFila(&fila, elementoProcurado)) {
         cout << "O elemento " << elementoProcurado << " está na fila." << endl;
@@ -57,7 +57,7 @@ int main() {
     } else {
         cout << "O elemento " << elementoProcurado << " não está na fila." << endl;
     }
-	*/
+	
 
     destroyQueue(&fila);
     return 0;
@@ -113,6 +113,22 @@ void displayQueue(Queue *q) {
     } else {
         cout << "Fila vazia." << endl;
     }
+}
+
+// Função para buscar um elemento na fila
+
+bool buscaFila(Queue *q, int valor){
+    int posicao = 0;
+    NO *atual = q->frente;
+    while (atual != NULL){
+        if(valor == atual->valor){
+            cout << "Elemento encontrado, e está na posição: " << posicao <<endl;
+            return true;
+        }
+        atual = atual->prox;
+        posicao++;
+    }
+    return false;
 }
 
 // Função para liberar a memória alocada pela fila
